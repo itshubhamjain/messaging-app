@@ -1,0 +1,33 @@
+package org.shubham.javabrain.messenger.service;
+import org.shubham.javabrain.messenger.database.DBConnect;
+import org.shubham.javabrain.messenger.model.Message;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.core.Response;
+
+//import org.shubham.javabrain.messenger.resources.*;
+@Path("/message")
+public class MessageService {
+	
+	@GET
+	@Path("{id}/{message}/{too}")
+	public Response getResponse(@PathParam("id") String id,
+            @PathParam("message") String message,@PathParam("too") String too){
+		
+		Message m1=new Message();
+		DBConnect dcon = new DBConnect();
+		String all = new String();
+		dcon.putdata(m1);
+		 
+		
+		all=dcon.getdata() ;
+		return Response.status(200).entity(all).build();
+	
+		
+	
+	}
+	
+	
+}

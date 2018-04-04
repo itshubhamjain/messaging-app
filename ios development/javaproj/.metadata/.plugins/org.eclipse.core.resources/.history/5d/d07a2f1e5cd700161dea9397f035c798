@@ -1,0 +1,5 @@
+package org.shubham.javabrain.messenger.resources;
+
+public @interface GET {
+
+}

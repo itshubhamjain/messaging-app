@@ -1,0 +1,31 @@
+package org.shubham.javabrain.messenger.service;
+
+
+
+
+//import java.util.List;
+
+import org.shubham.javabrain.messenger.database.DBConnect;
+import org.shubham.javabrain.messenger.model.Message;
+//import org.shubham.javabrain.messenger.resources.*;
+public class MessageService {
+	
+	
+	public String getAllMessages(){
+		
+		
+		Message m1=new Message(String message,String too);
+		DBConnect dcon = new DBConnect();
+		String all = new String();
+		dcon.putdata(m1);
+		 
+		
+		all=dcon.getdata() ;
+		return all;
+	
+		
+	
+	}
+	
+	
+}
